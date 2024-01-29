@@ -1,0 +1,19 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+	<PropertyGroup>
+		<TargetFramework>net6.0</TargetFramework>
+		<Nullable>enable</Nullable>
+		<ImplicitUsings>enable</ImplicitUsings>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Amazon.Lambda.AspNetCoreServer" Version="8.1.0" />
+		<PackageReference Include="AWSSDK.Extensions.NETCore.Setup" Version="3.7.7" />
+		<PackageReference Include="FindexMapper.Core" Version="2024.1.15.42" />
+		<PackageReference Include="FindexMapper.Service" Version="2023.12.27.40" />
+		<PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="6.0.22" />
+		<PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+		<PackageReference Include="Newtonsoft.Json.Schema" Version="3.0.15" />
+	</ItemGroup>
+
+</Project>

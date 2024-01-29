@@ -1,0 +1,34 @@
+service: mapeador-{slug}
+app: integradores
+org: findex
+frameworkVersion: '3'
+
+#plugins:
+#  - serverless-domain-manager
+#
+#custom:
+#  customDomain:
+#    domainName: {slug}.integraciones.factusv.com
+#    basePath: ''
+#    stage: ${self:provider.stage}
+#    createRoute53Record: true
+
+provider:
+  name: aws
+  runtime: dotnet6
+  stage: prod
+  region: us-east-2
+
+package:
+  individually: true
+
+functions:
+  mapper:
+    handler: Integrador::Integrador.ServerlessEntryPoint::FunctionHandlerAsync
+    package:
+      artifact: bin/Release/net6.0/serverless.zip
+    events:
+     - httpApi:
+         path: /mapper/procesar
+         method: POST
+
